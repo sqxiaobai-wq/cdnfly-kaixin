@@ -44,7 +44,7 @@ elseif(strpos($url, '/check') !== false && $method=='POST'){
     echo json_encode($data);
 }
 elseif(strpos($url, '/common/datetime') !== false && $method=='GET'){
-    return date('Y-m-d H:i:s');
+    echo date('Y-m-d H:i:s');
 }
 elseif(strpos($url, '/master/upgrades') !== false){
     $version_data = file_get_contents('version.json');
